@@ -8,7 +8,7 @@ class Cat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Add Category",
+          "Category",
         ),
         centerTitle: true,
       ),

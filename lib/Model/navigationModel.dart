@@ -1,5 +1,7 @@
+import 'package:get/get.dart';
+
 class NavigationModel {
-  int selectedIndex;
+  RxInt selectedIndex;
 
   NavigationModel({required this.selectedIndex});
 }

@@ -9,12 +9,15 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var data = Get.put(NavigationController());
-    List<Widget> PageList = [Cat(), AddCat()];
+    NavigationController data = Get.put(NavigationController());
+    List<Widget> PageList = [
+      Add_Cat(),
+      Cat(),
+    ];
     return Scaffold(
       bottomNavigationBar: GetBuilder<NavigationController>(
         builder: (_) => NavigationBar(
-          selectedIndex: data.navigationModel.selectedIndex,
+          selectedIndex: data.navigationModel.selectedIndex.value,
           onDestinationSelected: (val) {
             data.changeTab(val: val);
           },
