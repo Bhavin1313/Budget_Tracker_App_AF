@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class NavigationController extends GetxController {
   NavigationModel navigationModel = NavigationModel(selectedIndex: 0.obs);
   PageController pageController = PageController();
-  int? Selectedindex;
+  RxInt Selectedindex = 0.obs;
 
   void changeTab({required int val}) {
     navigationModel.selectedIndex(val);
@@ -15,7 +15,6 @@ class NavigationController extends GetxController {
   }
 
   void setSelectedindex({required int i}) {
-    Selectedindex = i;
-    update();
+    Selectedindex(i);
   }
 }

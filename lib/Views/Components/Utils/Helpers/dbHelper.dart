@@ -58,4 +58,16 @@ class DB_Helper {
     int? res = await database?.rawUpdate(query, args);
     return res;
   }
+
+  Future<List<Category>?> searchCategoryData(
+      {required String searchName}) async {
+    await initDB();
+    String query =
+        "SELECT * FROM $category_table WHERE $category_name LIKE '%$searchName%';";
+    List<Map<String, dynamic>> fetchedData =
+        (await database!.rawDelete(query)) as List<Map<String, dynamic>>;
+    List<Category> searchedCategory =
+        fetchedData.map((e) => Category.fromSQL(data: e)).toList();
+    return searchedCategory;
+  }
 }

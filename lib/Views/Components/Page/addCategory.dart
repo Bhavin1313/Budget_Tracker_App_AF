@@ -97,10 +97,11 @@ class Add_Cat extends StatelessWidget {
                                   ? Colors.black
                                   : Colors.white), // Border.al
                           image: DecorationImage(
-                              image: AssetImage(
-                                categoryIcons[i],
-                              ),
-                              fit: BoxFit.cover),
+                            image: AssetImage(
+                              categoryIcons[i],
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
