@@ -15,7 +15,7 @@ class Category {
     return Category(
       category_name: data['category_name'],
       category_image: data['category_image'],
-      id: data['id'],
+      id: data['cat_id'],
     );
   }
 }

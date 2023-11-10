@@ -19,7 +19,7 @@ class DB_Helper {
     database = await openDatabase(db_Path, version: 1,
         onCreate: (Database db, _) async {
       String query =
-          "CREATE TABLE IF NOT EXISTS ${category_table}($category_id INTEGER PRIMARY KEY AUTOINCREMENT,$category_name TEXT NOT NULL,$category_image BLOB);";
+          "CREATE TABLE IF NOT EXISTS $category_table($category_id INTEGER PRIMARY KEY AUTOINCREMENT,$category_name TEXT NOT NULL,$category_image BLOB);";
       await db.execute(query);
     });
   }
