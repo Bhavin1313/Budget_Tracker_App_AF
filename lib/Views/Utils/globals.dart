@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 List<String> categoryIcons = [
   "lib/Views/Components/Utils/categoryicons/bill.png",
@@ -25,4 +26,14 @@ class Global {
   static String? cat_name;
   static TextEditingController categoryController = TextEditingController();
   static ByteData? imgdata;
+
+  static String spending_name = "";
+  static String spending_amount = "";
+  static DateTime? spending_date;
+  static TimeOfDay? spending_time;
+  static String spending_type = "";
+  static String spending_mode = "";
+
+  static TextEditingController spending_name_c = TextEditingController();
+  static TextEditingController spending_amount_c = TextEditingController();
 }

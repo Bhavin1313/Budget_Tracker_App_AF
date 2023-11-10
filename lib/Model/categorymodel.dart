@@ -6,6 +6,7 @@ class Category {
   Uint8List category_image;
 
   Category({
+    this.id,
     required this.category_name,
     required this.category_image,
   });
@@ -14,6 +15,7 @@ class Category {
     return Category(
       category_name: data['category_name'],
       category_image: data['category_image'],
+      id: data['id'],
     );
   }
 }

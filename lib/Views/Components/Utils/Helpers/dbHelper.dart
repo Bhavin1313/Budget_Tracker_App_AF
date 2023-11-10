@@ -33,11 +33,10 @@ class DB_Helper {
     return res;
   }
 
-  Future<List<Category>?> fetchCategoryData() async {
+  Future<List<Category>> fetchCategoryData() async {
     await initDB();
     String query = "SELECT * FROM $category_table;";
-    List<Map<String, dynamic>> fetchedData =
-        (await database!.rawDelete(query)) as List<Map<String, dynamic>>;
+    List<Map<String, dynamic>> fetchedData = await database!.rawQuery(query);
     List<Category> fetchedCategory =
         fetchedData.map((e) => Category.fromSQL(data: e)).toList();
     return fetchedCategory;
